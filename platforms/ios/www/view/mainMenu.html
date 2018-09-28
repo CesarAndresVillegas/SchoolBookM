@@ -1,0 +1,65 @@
+<ion-view view-title="Menu" name="menu-view" ng-init="init()" cache-view="false">
+    <ion-header-bar style="background: #096D8F">
+        <button class="button button-icon icon ion-chevron-left icon-yellow" ng-click="back()"></button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="container">
+            <div class="cell-row">
+                <div style="background-color: #4575D4; border-right: solid white !important; border-bottom: solid white !important;" ng-click="userProfile()">
+                    <div>
+                        <div><i class="ion-person"></i></div>
+                        <div class="font20w">Perfil</div>
+                    </div>
+                </div>
+                <div style="background-color: #05296E; border-bottom: solid white !important;" ng-click="userInbox('Documents')">
+                    <div>
+                        <div><i class="ion-ios-paper"></i></div>
+                        <div class="font20w">{{messageTextDocuments}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-row">
+                <div style="background-color: #1D766F; border-right: solid white !important; border-bottom: solid white !important;" ng-click="userInbox('Follows')">
+                    <div>
+                        <div><i class="ion-ribbon-b"></i></div>
+                        <div class="font20w">{{messageTextFollows}}</div>
+                    </div>
+                </div>
+                <div style="background-color: #009D91; border-bottom: solid white !important;" ng-click="userInbox('Restaurant')">
+                    <div>
+                        <div><i class="ion-pizza"></i></div>
+                        <div class="font20w">{{messageTextRestaurant}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-row">
+                <div style="background-color: #FFA700; border-right: solid white !important; border-bottom: solid white !important;" ng-click="userInbox('Family')">
+                    <div>
+                        <div><i class="ion-ios-people"></i></div>
+                        <div class="font20w">{{messageTextAsofamily}}</div>
+                    </div>
+                </div>
+                <div style="background-color: #A66D00; border-bottom: solid white !important;" ng-click="userInbox('Rectory')">
+                    <div>
+                        <div><i class="ion-university"></i></div>
+                        <div class="font20w">{{messageTextRectory}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-row">
+                <div style="background-color: #1144AA; border-right: solid white !important; border-bottom: solid white !important;" ng-click="sendMessage()">
+                    <div>
+                        <div><i class="ion-paper-airplane"></i></div>
+                        <div class="font20w">Enviar mensaje</div>
+                    </div>
+                </div>
+                <div style="background-color: #FF7F00; border-bottom: solid white !important;" ng-click="userInbox('Route')">
+                    <div>
+                        <div><i class="ion-android-bus"></i></div>
+                        <div class="font20w">{{messageTextRoute}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

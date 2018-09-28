@@ -1,0 +1,43 @@
+<ion-view view-title="SchoolBook" align-title="left" cache-view="false" ng-init="init()">
+    <ion-header-bar style="background: #096D8F">
+        <button class="button button-icon icon ion-chevron-left icon-yellow" ng-click="back()"></button>
+    </ion-header-bar>
+    <ion-content style="background: url(img/background1.png) center; background-size: cover;">
+        <div class="list">
+            <br>
+            <div class="control-center60">
+                <a class="font-title-white">SchooL</a><a class="font-title-red">BooK</a>
+            </div>
+            <br>
+            <div class="row item control-center98">
+                <div class="col col-10"></div>
+                <div class="col col-33 font18r textAlign-l">Remitente</div>
+                <div class="col col-33 font18r textAlign-l">Asunto</div>
+                <div class="col col-10"></div>
+            </div>
+            <ion-scroll direction="y" style="height: 400px;" class="control-center98">
+                <div class="row item" ng-repeat="r in inboxList" ng-class="{'row-selected':$index == idUserCurrentIndex}">
+                    <div class="col col-10 col-center" ng-switch on="r.readed" ng-click="selectMessage($index)" >
+                        <a style="color: red !important;" class="ion-ios-email-outline" ng-switch-when="0"></a>
+                        <a style="color: green !important;" class="ion-android-done-all" ng-switch-when="1"></a>
+                    </div>
+                    <div ng-click="selectMessage($index)" class="col col-33 col-center font14b textAlign-l">{{r.remitente}}</div>
+                    <div ng-click="selectMessage($index)" class="col col-33 col-center font14b textAlign-l">{{r.subjet}}</div>
+                    <div class="col col-10 col-center" ng-switch on="r.fav">
+                        <button ng-switch-when="0" class="button button-small button-icon icon ion-ios-star-outline" ng-click="addFav($index)"></button>
+                        <button style="color: #FACC2E;" ng-switch-when="1" class="button button-small button-icon icon ion-ios-star" ng-click="addFav($index)"></button>
+                    </div>
+                </div>
+            </ion-scroll>
+            <br>
+            <div class="row control-center98">
+                <button style="margin-right: 2%;" ng-show="routeFlag" class="button button-small button-block ion-checkmark-circled icon-right button-blue icon-yellow button-small" ng-click="goChecking()">
+                    <a class="font16w">Ver Checking</a>
+                </button>
+                <button style="margin-right: 2%;" ng-show="routeFlag" class="button button-small button-block ion-map icon-right button-blue icon-yellow button-small" ng-click="goMap()">
+                    <a class="font16w">Ver en mapa</a>
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

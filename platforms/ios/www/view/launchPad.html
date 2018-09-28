@@ -1,0 +1,20 @@
+<ion-view view-title="SchoolBook" align-title="left" cache-view="false" ng-init="init()">
+    <ion-content class="padding" style="background: url(img/background.png) center; background-size: cover;">
+        <div class="list">
+            <div style="text-align: center; margin-top: 30%">
+                <a class="font-title-white50">SchooL</a><a class="font-title-red50">BooK</a>
+            </div>
+            <div style="text-align: center; margin-top: 20%" class="item input-no-border font24w">Seleccione institución:
+            </div>
+            <div style="text-align: center; margin-top: 15%; margin-left: 15%; margin-right: 15%;" class="item item-input input-border-bottom">
+                <select class="transparent-input font20w input-no-border background-transparent" style="text-align: right;" ng-model="client.selected">
+                    <option value="0">Colegio Alemán</option>
+                </select>
+            </div>
+            <button style="margin-top: 50%;" class="button button-block ion-log-in icon-right control-center60 button-blue icon-yellow" ng-click="login()">
+                <a class="font24w">Ingresar</a>
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
+

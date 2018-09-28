@@ -1,0 +1,75 @@
+<ion-view view-title="SchoolBook" align-title="left" cache-view="false" ng-init="init()">
+    <ion-header-bar style="background: #096D8F">
+        <button class="button button-icon icon ion-chevron-left icon-yellow" ng-click="back()"></button>
+    </ion-header-bar>
+    <ion-content class="padding" style="background: url(img/background1.png) center; background-size: cover;">
+        <div class="list">
+            <br>
+            <div class="control-center60">
+                <a class="font-title-white">SchooL</a><a class="font-title-red">BooK</a>
+            </div>
+            <br>
+            <label class="item item-input input-border-bottom font18w">Numero Ruta:
+                <input class="font18w" type="text" spellcheck="false" ng-model="route.name">
+            </label>
+            <div class="row">
+                <div class="col col-90">
+                    <div class="row item control-center98">
+                        <div class="col font14r textAlign-l">Rutas activas</div>
+                    </div>
+                    <ion-scroll direction="y" style="height: 135px;" class="control-center98">
+                        <div class="row item" ng-repeat="r in routeList" ng-click="gridRouteClick($index)" ng-class="{'row-selected':$index == idRouteCurrentIndex}">
+                            <div class="col col-center font14b textAlign-l">{{r.name}}</div>
+                        </div>
+                    </ion-scroll>
+                </div>
+                <div class="col">
+                    <button class="button button-icon icon ion-plus-circled icon-green" ng-click="createRoutes()">
+                    </button>
+                    <button class="button button-icon icon ion-minus-circled icon-red" ng-click="deleteRoutes()">
+                    </button>
+                </div>
+            </div>
+            <br>
+            <label class="item item-input input-border-bottom">
+                <div class="font18w">Estudiante:</div>
+                <select style="margin-left: 50% !important;" class="transparent-input font24w input-no-border background-transparent" ng-model="route.student_id" ng-options="option.name for option in studentList track by option.id">
+                </select>
+            </label>
+            <label class="item item-input input-border-bottom">
+                <div class="font18w">Día de la semana:</div>
+                <select style="margin-left: 20% !important;" class="transparent-input font18w input-no-border background-transparent" ng-model="alliesData.allies_type">
+                    <option value="1">Lunes</option>
+                    <option value="2">Martes</option>
+                    <option value="3">Miercoles</option>
+                    <option value="4">Jueves</option>
+                    <option value="5">Viernes</option>
+                </select>
+            </label>
+            <div class="row">
+                <div class="col col-90">
+                    <div class="row item control-center98">
+                        <div class="col col-80 font14r textAlign-l">Estudiante</div>
+                        <div class="col col-20 font14r textAlign-l">Dia</div>
+                    </div>
+                    <ion-scroll direction="y" style="height: 135px;" class="control-center98">
+                        <div class="row item" ng-repeat="r in studentRouteList" ng-click="gridStudentClick($index)" ng-class="{'row-selected':$index == idStudentCurrentIndex}" ng-switch on="r.day">
+                            <div class="col col-80 col-center font12 textAlign-l">{{r.name}}</div>
+                            <div class="col col-20 col-center font12 textAlign-l" ng-switch-when="1">Lunes</div>
+                            <div class="col col-20 col-center font12 textAlign-l" ng-switch-when="2">Martes</div>
+                            <div class="col col-20 col-center font12 textAlign-l" ng-switch-when="3">Miercoles</div>
+                            <div class="col col-20 col-center font12 textAlign-l" ng-switch-when="4">Jueves</div>
+                            <div class="col col-20 col-center font12 textAlign-l" ng-switch-when="5">Viernes</div>
+                        </div>
+                    </ion-scroll>
+                </div>
+                <div class="col">
+                    <button class="button button-icon icon ion-plus-circled icon-green" ng-click="createRoute_student()">
+                    </button>
+                    <button class="button button-icon icon ion-minus-circled icon-red" ng-click="deleteRoute_student()">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

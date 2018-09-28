@@ -1,0 +1,73 @@
+<ion-view view-title="SchoolBook" align-title="left" cache-view="false" ng-init="init()">
+    <ion-header-bar style="background: #096D8F">
+        <button class="button button-icon icon ion-chevron-left icon-yellow" ng-click="back()"></button>
+    </ion-header-bar>
+    <ion-content style="background: url(img/background1.png) center; background-size: cover;">
+        <div class="list">
+            <br>
+            <div class="control-center60">
+                <a class="font-title-white">SchooL</a><a class="font-title-red">BooK</a>
+            </div>
+            <div style="text-align: center; margin-top: 20px; margin-bottom: 30px">
+                <p class="font20w">Checking de alumnos</p>
+            </div>
+            <div class="row item control-center98">
+                <div class="col col-10"></div>
+                <div class="col col-50 font18r textAlign-l">Alumno</div>
+                <div class="col col-25 font18r textAlign-l">Grado</div>
+                <div class="col col-10"></div>
+            </div>
+            <ion-scroll direction="y" style="height: 430px;" class="control-center98">
+                <div class="row item">
+                    <div class="col col-10 col-center">
+                        <a style="color: green;" class="ion-checkmark-circled"></a>
+                    </div>
+                    <div class="col col-50 col-center font14b textAlign-l">Cesar Andres Villegas</div>
+                    <div class="col col-25 col-center font14b textAlign-l">9A</div>
+                    <div class="col col-10 col-center">
+                        <button class="button button-small button-icon"></button>
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col col-10 col-center">
+                        <a style="color: green;" class="ion-checkmark-circled"></a>
+                    </div>
+                    <div class="col col-50 col-center font14b textAlign-l">Monica Gutierrez</div>
+                    <div class="col col-25 col-center font14b textAlign-l">10A</div>
+                    <div class="col col-10 col-center">
+                        <button class="button button-small button-icon icon"></button>
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col col-10 col-center">
+                        <a style="color: red;" class="ion-close-circled"></a>
+                    </div>
+                    <div class="col col-50 col-center font14b textAlign-l">Juan David Villegas</div>
+                    <div class="col col-25 col-center font14b textAlign-l">9B</div>
+                    <div class="col col-10 col-center">
+                        <button class="button button-small button-icon icon ion-person-add" ng-click="checkIn($index)"></button>
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col col-10 col-center">
+                        <a style="color: red;" class="ion-close-circled"></a>
+                    </div>
+                    <div class="col col-50 col-center font14b textAlign-l">Francisco Restrepo</div>
+                    <div class="col col-25 col-center font14b textAlign-l">7A</div>
+                    <div class="col col-10 col-center">
+                        <button class="button button-small button-icon icon ion-person-add" ng-click="checkIn($index)"></button>
+                    </div>
+                </div>
+                <div class="row item">
+                    <div class="col col-10 col-center">
+                        <a style="color: green;" class="ion-checkmark-circled"></a>
+                    </div>
+                    <div class="col col-50 col-center font14b textAlign-l">Jacobo Chacon</div>
+                    <div class="col col-25 col-center font14b textAlign-l">10B</div>
+                    <div class="col col-10 col-center">
+                        <button class="button button-small button-icon icon"></button>
+                    </div>
+                </div>
+            </ion-scroll>
+    </ion-content>
+</ion-view>

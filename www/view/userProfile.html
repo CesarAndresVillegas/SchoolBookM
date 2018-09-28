@@ -1,0 +1,44 @@
+<ion-view view-title="SchoolBook" align-title="left" cache-view="false" ng-init="init()">
+    <ion-header-bar style="background: #096D8F">
+        <button class="button button-icon icon ion-chevron-left icon-yellow" ng-click="back()"></button>
+    </ion-header-bar>
+    <ion-content class="padding" style="background: url(img/background1.png) center; background-size: cover;">
+        <div class="list">
+            <br>
+            <div class="control-center60">
+                <a class="font-title-white">SchooL</a><a class="font-title-red">BooK</a>
+            </div>
+            <br>
+            <br>
+            <label class="item item-input input-border-bottom control-center80">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Nombres..." spellcheck="false" ng-model="user.name">
+            </label>
+            <label class="item item-input input-border-bottom control-center80">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Apellidos..." spellcheck="false" ng-model="user.last_name">
+            </label>
+            <label class="item item-input input-border-bottom control-center80">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Documento..." spellcheck="false" ng-model="user.document">
+            </label>
+            <label class="item item-input input-border-bottom control-center80">
+                <input class="placeholder-input18 font18w" type="text" placeholder="No. Celular..." spellcheck="false" ng-model="user.phone">
+            </label>
+            <label class="item item-input input-border-bottom control-center80">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Dirección..." spellcheck="false" ng-model="user.address">
+            </label>
+            <button class="button button-block ion-ios-loop-strong icon-right control-center80 button-blue icon-yellow button-small" ng-click="updateUsers()">
+                <a class="font20w">Modificar</a>
+            </button>
+            <br>
+            <label class="item item-input input-border-bottom control-center80">
+                <input class="placeholder-input18 font18w" type="password" placeholder="Nueva contraseña..." spellcheck="false" ng-model="user.pass1">
+            </label>
+            <label class="item item-input input-border-bottom control-center80">
+                <input class="placeholder-input18 font18w" type="password" placeholder="Repita contraseña..." spellcheck="false" ng-model="user.pass2">
+            </label>
+            <button class="button button-block ion-ios-loop-strong icon-right control-center80 button-blue icon-yellow button-small" ng-click="updateUsersPass()">
+                <a class="font20w">Modificar</a>
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,58 @@
+<ion-view view-title="SchoolBook" align-title="left" cache-view="false" ng-init="init()">
+    <ion-header-bar style="background: #096D8F">
+        <button class="button button-icon icon ion-chevron-left icon-yellow" ng-click="back()"></button>
+    </ion-header-bar>
+    <ion-content class="padding" style="background: url(img/background1.png) center; background-size: cover;">
+        <div class="list">
+            <br>
+            <div class="control-center60">
+                <a class="font-title-white">SchooL</a><a class="font-title-red">BooK</a>
+            </div>
+            <br>
+            <div class="item item-input input-border-bottom">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Nombres..." spellcheck="false" ng-model="users.name">
+            </div>
+            <div class="item item-input input-border-bottom">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Apellidos..." spellcheck="false" ng-model="users.last_name">
+            </div>
+            <div class="item item-input input-border-bottom">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Documento..." spellcheck="false" ng-model="users.document">
+                <div class="col">
+                    <a style="color: white !important;" class="button button-icon icon ion-search" ng-click="getUserId()"></a>
+                </div>
+            </div>
+            <div class="item item-input input-border-bottom">
+                <input class="placeholder-input18 font18w" type="number" placeholder="No. Celular..." spellcheck="false" ng-model="users.phone">
+            </div>
+            <div class="item item-input input-border-bottom">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Dirección..." spellcheck="false" ng-model="users.address">
+            </div>
+            <div class="item item-input input-border-bottom">
+                <input class="placeholder-input18 font18w" type="text" placeholder="Mail..." spellcheck="false" ng-model="users.mail">
+            </div>
+            <div class="item item-input input-border-bottom">
+                <input class="placeholder-input18 font18w" type="password" placeholder="Pass..." spellcheck="false" ng-model="users.pass">
+            </div>
+            <div class="item item-input input-border-bottom">
+                <input class="placeholder-input18 font18w" type="password" placeholder="Confirme pass..." spellcheck="false" ng-model="users.pass_confirm">
+            </div>
+            <div class="item item-input input-border-bottom">
+                <div class="font18w">Rol:</div>
+                <select style="margin-left: 30% !important;" class="transparent-input font18w input-no-border background-transparent" ng-model="users.roles_id">
+                    <option value="3">Docentes/Admin</option>
+                    <option value="2">Rutas</option>
+                    <option value="5">Padres</option>
+                </select>
+            </div>
+            <ion-checkbox class="input-border-bottom" ng-model="users.active"><a class="font18w">Activar usuario</a></ion-checkbox>
+            <div class="row">
+                <button style="margin-right: 1% !important;" class="col button button-small button-block ion-ios-loop-strong icon-right button-blue icon-yellow button-small" ng-click="createUsers()">
+                    <a class="font16w">ALMACENAR</a>
+                </button>
+                <button style="margin-left: 1% !important;" class="col button button-small button-block ion-ios-loop-strong icon-right button-blue icon-yellow button-small" ng-click="updateUsers()">
+                    <a class="font16w">MODIFICAR</a>
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
